@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import '../node_modules/bootstrap/dist/css/bootstrap.css'; //Note the path to bootstrap
 import './index.css';
 import App from './App';
+import NewsFeed from './components/news-feed';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  React.createElement(NewsFeed, {}, null), //Create and render NewsFeed, then strap it to the div with the id 'root'
   document.getElementById('root')
 );
 
