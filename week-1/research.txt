@@ -1,0 +1,13 @@
+There are a number of alternatives to React. Not surprising since it's associated with the controversial giant Meta/Facebook. Vue JS is a well-known open-source competitor. This framework is, "Mainly targeted to develop single-page applications and their user interfaces."1 It's user friendly design and small library size makes it good for junior developers.1 
+
+Inferno JS is another option. It's library is similar to React and is performance oriented. Spec India touts Inferno has, "The fastest runtime performance and is good at the isomorphic rendering of real-time data views."1
+
+Last on the list, but far from the last tool out there is Xamarin, which is good for Apple, Android and Windows apps.1 Interesting because it's powered by Microsoft.1 It is a, "Cross-platform implementation of the Common Language Specifications or Common Language Infrastructure (CLI)."1 Unlike React and Inferno, Xamarin is written in C#.1 Combining Xamarin with Visual Studio makes it easy for beginners to create apps.1
+
+
+
+
+
+Sources
+
+1 https://www.spec-india.com/blog/react-alternatives
