@@ -1,0 +1,31 @@
+How to install Webpack!
+Note: Don't include "" double quotes in command. I only added those since this is a plain text file. Do include '' single quotes.
+
+1. On project root, run "npm init -y".
+
+2. Run "npm install react --save-dev".
+
+3. Run "npm install react-dom --save-dev".
+
+4. Run "npm install webpack --save-dev".
+
+5. Run "npm install webpack-cli --save-dev".
+
+6. Run "code ." to open project root in VSCode.
+
+7. In VSCode, create a "dist" folder at the project root and create an "index.html" file inside.
+
+8. Create a "src" folder at the project root and create an "index.js" file inside. Note: This JS file *cannot* be called "app.js".
+
+9. Start basis of "index.html" file. Add whatever div with id you want. Add a script tag for Webpack at the end of the HTML body:
+"<script src='main.js'></script>"
+Note: This "main.js" file does not exist yet and HTML will not render in browser yet.
+
+10. Start basis of "index.js" file. Import React and ReactDOM with the following code:
+"import React from 'react';"
+"import ReactDOM from 'react-dom';"
+Add test code to be rendered.
+
+11. In CLI, run "npx webpack". Now the "main.js" file should appear in the "dist" folder you created.
+
+12. Test "index.html" file in browser. If everything went right, your rendered element should appear.
