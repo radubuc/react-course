@@ -6,8 +6,15 @@ import App from './App';
 import NewsFeed from './components/news-feed';
 import reportWebVitals from './reportWebVitals';
 
+//Straight up React - REACT COMPONENTS VIDEO
+// ReactDOM.render(
+//   React.createElement(NewsFeed, {}, null), //Create and render NewsFeed, then strap it to the div with the id 'root'
+//   document.getElementById('root')
+// );
+
+//JSX - JSX VIDEO NOTES
 ReactDOM.render(
-  React.createElement(NewsFeed, {}, null), //Create and render NewsFeed, then strap it to the div with the id 'root'
+  <NewsFeed />, //Create and render NewsFeed, then strap it to the div with the id 'root'
   document.getElementById('root')
 );
 
