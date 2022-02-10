@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 //Straight up React - REACT COMPONENTS VIDEO
 // export default class LikeButton extends React.Component {
@@ -10,7 +10,7 @@ import React from 'react'
 //JSX - JSX VIDEO NOTES
 export default class LikeButton extends React.Component {
     render() {
-         return <button className='btn btn-primary'>Like</button>
+         return <button className='btn btn-primary'>Like</button>;
     }
 }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 //Straight up React - REACT COMPONENTS VIDEO
 // export default class LikeButton extends React.Component {

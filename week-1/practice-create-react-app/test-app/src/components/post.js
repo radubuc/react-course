@@ -3,9 +3,9 @@ import ReplyButton from './reply-button';
 import LikeButton from './like-button';
 import Comment from './comment';
 
-let e = React.createElement;
-
 //Straight up React - REACT COMPONENTS VIDEO
+// let e = React.createElement;
+
 // export default class Post extends React.Component {
 //     render() {
 //         return e('div',

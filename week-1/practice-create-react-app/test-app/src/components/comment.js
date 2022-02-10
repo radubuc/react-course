@@ -2,9 +2,9 @@ import React from "react";
 import ReplyButton from './reply-button'; //Comment must be able to access both Reply and Like Button
 import LikeButton from "./like-button";
 
-let e = React.createElement; //Creating a variable here so we don't have to type out as much every time
-
 //Straight up React - REACT COMPONENTS VIDEO
+// let e = React.createElement; //Creating a variable here so we don't have to type out as much every time
+
 // export default class Comment extends React.Component {
 //     render() {
 //         return e('div',
