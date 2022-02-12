@@ -7,8 +7,12 @@ import LoginForm from './components/login';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <NavBar />,
-  <LoginForm />,
+<div>
+  <NavBar />
+  <LoginForm />
+</div>,
+//Note: Cannot pass more than 2 params using render() in index.js. Get around it for now by putting components in a div
+  
   document.getElementById('root')
 );
 
