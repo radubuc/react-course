@@ -5,7 +5,7 @@ export default class LoginForm extends React.Component {
         return (
             <div className='container border border-primary'>
                 <h3 className='text-center'>
-                    Login
+                    Login to YouTwitFace
                 </h3>
                 <form>
                     <div class="form-group">

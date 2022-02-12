@@ -10,7 +10,7 @@ export default class NavBar extends React.Component {
                 <div>
                     <a href="#">Embarrassing Videos</a>
                     <a href="#">Dumpster Fire News</a>
-                    <a href="#">Get Scammed</a>
+                    <a href="#">Click Here to Get Scammed</a>
                 </div>
             </div>
             
