@@ -3,40 +3,22 @@ import ReplyButton from './reply-button';
 import LikeButton from './like-button';
 import Comment from './comment';
 
-
-//UPDATING STATE VIDEO NOTES
+//UNIQUE KEY PROP VIDEO NOTES
+//Modifying list of comment elements to use a key and map method to reduce verbosity
 export default class Post extends React.Component {
     constructor(props) { 
         super(props); 
         this.state = {
             comments: props.comments, 
             content: props.content,
-            count: 0 //Count only used in example of what not to do on line 23
+            
         };
-    } //Constructor is only place we should directly set state
+    }
     render() {
-        // let tempComments = this.state.comments;
-        // setTimeout(() => this.setState({content: 'state updated', comments: []}, () => setTimeout(() => this.setState({comments: tempComments}), 2000)), 2000); //Updates comments too. comments: [] is not the second parameter or callback! It's part of the first param. Second arrow function marks start of second param, which is a callback. Note: Second param has another callback inside. This is basically saying once first param is updated, I want to do the second param to it. Will bounce back and forth between original content and comments and state updated. Seems infinite? Simpler way to come?
-
-        // setTimeout(() => this.setState({content: 'state updated'}), 2000); //First part in ({}) is the object to update the values of the state. Prevents max update depth exceeded error. Doesn't replace entire state object, just matching values. Can tell because comments not changed. Changes 'This is my post content!' into 'state updated' message after 2 sec. Will be done outside of render() method in future
-
-        // DO NOT DO THIS in place of lines 18-19:
-        //Don't refer to this.state in setState
-        //this.setState({count: this.state.count + 1}) 
-
-        // DO THIS INSTEAD: 
-        //Use overridden version of this.setState and take previous state as an argument
-        setTimeout(() => this.setState(state/*, props*/ => ({count: state.count + 1}), () => console.log(this.state.count)), 2000);
-        //Return count: xxx as an object. State in object represents most updated state. Can also add props as a second param and refer to either in ({count: })
-        
-
-
-        let comments = []; 
+        let comments;
         if (this.state.comments) { 
-            for (let comment of this.state.comments) { 
-                comments.push(<Comment {...comment} />)
-            }
-        }
+            comments = this.state.comments.map((comment, index) => <Comment key={index} {...comment} />)
+        } //Map method takes each comment inside this.comments, creates a JSX element, which is a component with the index and comment as the props, and pushed those to comments array to be used on line 36
 
         return (
             <div className="card w-75">
@@ -57,6 +39,61 @@ export default class Post extends React.Component {
         );
     }
 }
+
+
+//UPDATING STATE VIDEO NOTES
+// export default class Post extends React.Component {
+//     constructor(props) { 
+//         super(props); 
+//         this.state = {
+//             comments: props.comments, 
+//             content: props.content,
+//             // count: 0 //Count only used in example of what not to do on line 23
+//         };
+//     } //Constructor is only place we should directly set state
+//     render() {
+//         let tempComments = this.state.comments;
+//         setTimeout(() => this.setState({content: 'state updated', comments: []}, () => setTimeout(() => this.setState({comments: tempComments}), 2000)), 2000); //Updates comments too. comments: [] is not the second parameter or callback! It's part of the first param. Second arrow function marks start of second param, which is a callback. Note: Second param has another callback inside. This is basically saying once first param is updated, I want to do the second param to it. Will bounce back and forth between original content and comments and state updated. Seems infinite? Simpler way to come?
+
+//         // setTimeout(() => this.setState({content: 'state updated'}), 2000); //First part in ({}) is the object to update the values of the state. Prevents max update depth exceeded error. Doesn't replace entire state object, just matching values. Can tell because comments not changed. Changes 'This is my post content!' into 'state updated' message after 2 sec. Will be done outside of render() method in future
+
+//         // DO NOT DO THIS in place of lines 18-19:
+//         //Don't refer to this.state in setState
+//         //this.setState({count: this.state.count + 1}) 
+
+//         // DO THIS INSTEAD: 
+//         //Use overridden version of this.setState and take previous state as an argument
+//         // setTimeout(() => this.setState(state/*, props*/ => ({count: state.count + 1}), () => console.log(this.state.count)), 2000);
+//         //Return count: xxx as an object. State in object represents most updated state. Can also add props as a second param and refer to either in ({count: })
+        
+
+
+//         let comments = []; 
+//         if (this.state.comments) { 
+//             for (let comment of this.state.comments) { 
+//                 comments.push(<Comment {...comment} />)
+//             }
+//         }
+
+//         return (
+//             <div className="card w-75">
+//                 <div className="card-header bg-primary text-white">
+//                     Username and Time
+//                 </div>
+//                 <div className="card-body">
+//                     {this.state.content}
+//                 </div>
+//                 <div className="card-footer">
+//                     <LikeButton />
+//                     &nbsp;
+//                     <ReplyButton />
+//                     &nbsp;
+//                     {comments} 
+//                 </div>
+//             </div>
+//         );
+//     }
+// }
 
 
 //STATE VIDEO NOTES
