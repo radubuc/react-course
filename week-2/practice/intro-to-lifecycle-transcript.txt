@@ -1,0 +1,35 @@
+Each class that extends React component comes with some inherited methods known as lifecycle methods.
+
+We can override these methods to run code at specific times during a components lifecycle.
+
+The lifecycle can be divided into three main sections: Mounting, updating and unmounting as shown by this React component lifecycle diagram.
+
+The mounting phase is when a component is being created and inserted into the Dom.
+
+As we can see, this is where our constructor method gets called.
+
+The constructor is the first method in the lifecycle and is used to initialize state and bind methods for events.
+
+Next, we have the render method.
+
+This is a special method, as it is the only lifecycle method that is required when you create a class component.
+
+We have already worked with this method and know that its purpose is to return React elements that are mounted to the Dom.
+
+This is typically JSX.
+
+As soon as a component has been added to the Dom successfully, the componentDidMount method will fire.
+
+This is a great place to make any Network calls.
+
+As we move into the updating phase, we can see that the render method is used again and is the first method in the updating phase.
+
+That's because this method gets called anytime a component must update, due to new props being passed in the set state method being called or the force update method being called similarly to the mounting phase.
+
+Once a component has updated there is a componentDidUpdate method available for us to override.
+
+An important difference between this method and the componentDidMount method is that this method will not be called after the initial render, but only for each additional render, while the componentDidMount method will only be called for the first render.
+
+A less commonly used lifecycle method that is not shown on this diagram is the shouldComponentUpdate method, which allows us to say whether a component should update or not when state or props change.
+
+Depending on what those changes are, the last phase, unmounting, contains a lifecycle method named componentWillUnmount, which is a great place for us to make sure we clean up anything our component created, such as subscriptions, so that we do not cause a memory leak.
