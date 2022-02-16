@@ -3,13 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import App from './App';
+import SecondsCounterContainer from './components/seconds-counter-container';
 import Container from './components/container';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Container />
-  </React.StrictMode>,
+  <SecondsCounterContainer />,
   document.getElementById('root')
 ); //Note: If counter starts counting by 2s, delete <React.StrictMode></React.StrictMode> component tags. Leave my component there though. If I have more than 1 component, wrap them all with one div
 
