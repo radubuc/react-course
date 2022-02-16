@@ -24,12 +24,12 @@ This is a great place to make any Network calls.
 
 As we move into the updating phase, we can see that the render method is used again and is the first method in the updating phase.
 
-That's because this method gets called anytime a component must update, due to new props being passed in the set state method being called or the force update method being called similarly to the mounting phase.
+That's because this method gets called anytime a component must update, due to new props being passed in, the set state method being called, or the force update method being called.
 
-Once a component has updated there is a componentDidUpdate method available for us to override.
+Similarly to the mounting phase, once a component has updated there is a componentDidUpdate method available for us to override.
 
 An important difference between this method and the componentDidMount method is that this method will not be called after the initial render, but only for each additional render, while the componentDidMount method will only be called for the first render.
 
-A less commonly used lifecycle method that is not shown on this diagram is the shouldComponentUpdate method, which allows us to say whether a component should update or not when state or props change.
+A less commonly used lifecycle method that is not shown on this diagram is the shouldComponentUpdate method, which allows us to say whether a component should update or not when state or props change, depending on what those changes are.
 
-Depending on what those changes are, the last phase, unmounting, contains a lifecycle method named componentWillUnmount, which is a great place for us to make sure we clean up anything our component created, such as subscriptions, so that we do not cause a memory leak.
+The last phase, unmounting, contains a lifecycle method named componentWillUnmount, which is a great place for us to make sure we clean up anything our component created, such as subscriptions, so that we do not cause a memory leak.
