@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+// import Movie from './components/movie';
+import MovieList from './components/movie-list-container';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MovieList />
   </React.StrictMode>,
   document.getElementById('root')
 );
