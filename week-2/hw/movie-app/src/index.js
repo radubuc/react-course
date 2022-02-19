@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <div>
-    <MovieList />,
+    <MovieList />
     <ReviewForm />
   </div>,
     
