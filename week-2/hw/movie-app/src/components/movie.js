@@ -13,7 +13,7 @@ export default class Movie extends React.Component {
             title: props.title,
             director: props.director,
             year: props.year,
-            synopsis: props.synopsis
+            synopsis: props.synopsis,
         }
     }
 

@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 // import Movie from './components/movie';
 import MovieList from './components/movie-list-container';
+import ReviewForm from './components/review-form';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <MovieList />
-  </React.StrictMode>,
+  <div>
+    <MovieList />,
+    <ReviewForm />
+  </div>,
+    
   document.getElementById('root')
 );
 
