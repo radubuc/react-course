@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import Movie from './components/movie';
+import Movie from './components/movie';
 import MovieList from './components/movie-list-container';
 import ReviewForm from './components/review-form';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <div>
-    <MovieList />
+    {/* <Movie /> */}
     <ReviewForm />
   </div>,
     

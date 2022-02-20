@@ -8,10 +8,22 @@
 import React from 'react';
 
 export default class Review extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            reviews: props.reviews
+        }
+    }
+
     render() {
         //Pull in reviews from review form here?
         //Use hard coded reviews to test? Test code reused from test-app-pt2
         let reviews = [
+            {
+                content: "Alec Baldwin has no comment.",
+                username: 'ThinningNotBald63',
+                date: '2-20-2022'
+            },
             {
                 content: "This is David Hasselhoff's review: 'It was great fun and to this day around the world kids stop me and say, 'Are you David Hasselhoff?' because I was the only human in the picture. It's amazing - so many of the kids were so young and didn't see Baywatch and Knight Rider so I got a whole new legion of fans.'",
                 username: 'TheHoff52',
@@ -22,20 +34,23 @@ export default class Review extends React.Component {
                 username: 'ScarJo1',
                 date: '2-17-2022'
             },
-            {
-                content: "This is Alec Baldwin's review",
-                username: 'ThinningNotBald63',
-                date: '12-19-2018'
-            },
+            
         ];
 
+        let reviewsArray;
+
         return (
-            <div className="container">
-                {/* Pass comments into the props that go into this post. Format: spread operator > comments: inside of object has comments array > then content: with string passed in, refers back to contructor(props) in post.js */}
-                <Post {...{comments: comments, content: "This is my post content!"}}/>
-                <Post {...{content: "Here is another post!!!"}}/>
-                <Post />
-            </div>
+            <ul>
+                <li></li>
+                {reviewsArray}
+            </ul>
+
+            // <div className="container">
+            //     {/* Pass comments into the props that go into this post. Format: spread operator > comments: inside of object has comments array > then content: with string passed in, refers back to contructor(props) in post.js */}
+            //     <Post {...{comments: comments, content: "This is my post content!"}}/>
+            //     <Post {...{content: "Here is another post!!!"}}/>
+            //     <Post />
+            // </div>
         );
     }
 }

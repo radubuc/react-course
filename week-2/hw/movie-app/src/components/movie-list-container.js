@@ -14,16 +14,17 @@ export default class MovieList extends React.Component {
 
         console.log(movies);
         return (
-            <div>
-                {movies.map((m, i) => {
-                    console.log(m);
-                    <Movie movie={m} />
-                } //Adds a key to each movie
-                    
+            // <div>
+            //     {movies.map((m, i) => {
+            //         console.log(m);
+            //         <Movie movie={m} />
+            //     } //Adds a key to each movie
+            //     )}
+            // </div>
 
-                )}
-                
-            </div>
+            <Movie {...{movies: movies}}/>
+
+
         );
     }
 }

@@ -17,6 +17,30 @@ export default class ReviewForm extends React.Component {
                     <label htmlFor="exampleFormControlTextarea1">What did you think about the movie?</label>
                     <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write your review here"></textarea>
                 </div>
+
+                <p>How many stars would you give it?</p>
+                <div className="form-check form-check-inline">
+                    <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="OneStar" />
+                    <label className="form-check-label" htmlFor="inlineRadio1">⭐</label>&emsp;
+                </div>
+                <div className="form-check form-check-inline">
+                    <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="TwoStars" />
+                    <label className="form-check-label" htmlFor="inlineRadio2">⭐⭐</label>&emsp;
+                </div>
+                <div className="form-check form-check-inline">
+                    <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="ThreeStars"/>
+                    <label className="form-check-label" htmlFor="inlineRadio3">⭐⭐⭐</label>&emsp;
+                </div>
+                <div className="form-check form-check-inline">
+                    <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="FourStars"/>
+                    <label className="form-check-label" htmlFor="inlineRadio3">⭐⭐⭐⭐</label>&emsp;
+                </div>
+                <div className="form-check form-check-inline">
+                    <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="FiveStars"/>
+                    <label className="form-check-label" htmlFor="inlineRadio3">⭐⭐⭐⭐⭐</label>
+                </div>
+                <br /><br />
+
                 <button type="submit" className="btn btn-primary mb-2">Submit review</button>
             </form>
         );
