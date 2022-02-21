@@ -11,26 +11,26 @@ export default class Movie extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: props.title,
-            director: props.director,
-            year: props.year,
-            synopsis: props.synopsis,
+            // title: props.title,
+            // director: props.director,
+            // year: props.year,
+            // synopsis: props.synopsis,
 
             movies: props.movies
         }
     }
 
     render() {
-        let movies = [
-            {
-                title: 'The Spongebob Squarepants Movie',
-                director: 'Stephen Hillenburg',
-                year: '2004',
-                synopsis: "In this lively animated adventure, undersea oddball SpongeBob SquarePants and his starfish friend, Patrick, embark on a quest to clear the name of Mr. Krabs, the owner of the Krusty Krab restaurant, who has been framed for stealing the crown of ocean deity King Neptune. Leaving the familiar confines of Bikini Bottom, SpongeBob and Patrick venture out towards Shell City, where they hope to find Neptune's crown, but numerous obstacles stand (or float) in their way."
-            } //Pass in movie as a props to Movie component
-        ];
+        // let movies = [
+        //     {
+        //         title: 'The Spongebob Squarepants Movie',
+        //         director: 'Stephen Hillenburg',
+        //         year: '2004',
+        //         synopsis: "In this lively animated adventure, undersea oddball SpongeBob SquarePants and his starfish friend, Patrick, embark on a quest to clear the name of Mr. Krabs, the owner of the Krusty Krab restaurant, who has been framed for stealing the crown of ocean deity King Neptune. Leaving the familiar confines of Bikini Bottom, SpongeBob and Patrick venture out towards Shell City, where they hope to find Neptune's crown, but numerous obstacles stand (or float) in their way."
+        //     } //Pass in movie as a props to Movie component
+        // ];
 
-        return (
+        return ( //Need to call movie component with props
             <div className="card" style={{width: '18rem'}}>
                 <div className="card-body">
                     <h5 className="card-title">{movies.title}</h5>

@@ -18,6 +18,7 @@ export default class Review extends React.Component {
     render() {
         //Pull in reviews from review form here?
         //Use hard coded reviews to test? Test code reused from test-app-pt2
+        //How do I add reviews to a specific movie?
         let reviews = [
             {
                 content: "Alec Baldwin has no comment.",
