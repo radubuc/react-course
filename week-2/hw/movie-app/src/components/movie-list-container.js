@@ -24,6 +24,11 @@ export default class MovieList extends React.Component {
             },
         ];
 
+        let array;
+        array = movies.map((movie, index) =>
+            <Movie title={movie.title} director={movie.director} year={movie.year} synopsis={movie.synopsis} key={index} />
+        )  
+
         console.log(movies);
         return (
             // <div>
@@ -34,9 +39,15 @@ export default class MovieList extends React.Component {
             //     )}
             // </div>
 
-            <Movie {...{movies: movies}}/>,
-            <Movie />,
-            <Movie />
+            // <div>
+            //     <Movie {...{ movies: movies }} />
+            //     <Movie />
+            //     <Movie />
+            // </div>
+            
+            <div>
+                {array}
+            </div>
 
 
         );

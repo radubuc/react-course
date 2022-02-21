@@ -9,8 +9,8 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <div>
-    {/* <Movie /> */}
-    <ReviewForm />
+    <MovieList />
+    {/* <ReviewForm /> */}
   </div>,
     
   document.getElementById('root')
