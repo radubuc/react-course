@@ -19,21 +19,28 @@ export default class Review extends React.Component {
         //Pull in reviews from review form here?
         //Use hard coded reviews to test? Test code reused from test-app-pt2
         //How do I add reviews to a specific movie?
+        //How do I get star rating pulled in? Hardcoding it for now
+        //Should I call this array Spongebob Movie-only reviews?
         let reviews = [
             {
                 movie: "The Spongebob Squarepants Movie",
-                content: "Alec Baldwin has no comment.",
                 username: 'ThinningNotBald63',
+                content: "Alec Baldwin has no comment.",
+                rating: "⭐",
                 date: '2-20-2022'
             },
             {
-                content: "This is David Hasselhoff's review: 'It was great fun and to this day around the world kids stop me and say, 'Are you David Hasselhoff?' because I was the only human in the picture. It's amazing - so many of the kids were so young and didn't see Baywatch and Knight Rider so I got a whole new legion of fans.'",
+                movie: "The Spongebob Squarepants Movie",
                 username: 'TheHoff52',
+                content: "This is David Hasselhoff's review: 'It was great fun and to this day around the world kids stop me and say, 'Are you David Hasselhoff?' because I was the only human in the picture. It's amazing - so many of the kids were so young and didn't see Baywatch and Knight Rider so I got a whole new legion of fans.'",
+                rating: "⭐⭐⭐⭐⭐",
                 date: '2-19-2022'
             },
             {
-                content: "This is Scarlett Johansson's review: 'The coolest thing about being a mermaid is wearing a seashell bra.'",
+                movie: "The Spongebob Squarepants Movie",
                 username: 'ScarJo1',
+                content: "This is Scarlett Johansson's review: 'The coolest thing about being a mermaid is wearing a seashell bra.'",
+                rating: "⭐⭐⭐⭐⭐",
                 date: '2-17-2022'
             },
             

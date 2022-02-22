@@ -4,13 +4,13 @@ import ReviewForm from './review-form.js';
 
 export default class MovieList extends React.Component {
     render() {
-        let movies = [
+        let movies = [ //Pass in movie as a props to Movie component
             {
                 title: 'The Spongebob Squarepants Movie',
                 director: 'Stephen Hillenburg',
                 year: '2004',
                 synopsis: "In this lively animated adventure, undersea oddball SpongeBob SquarePants and his starfish friend, Patrick, embark on a quest to clear the name of Mr. Krabs, the owner of the Krusty Krab restaurant, who has been framed for stealing the crown of ocean deity King Neptune. Leaving the familiar confines of Bikini Bottom, SpongeBob and Patrick venture out towards Shell City, where they hope to find Neptune's crown, but numerous obstacles stand (or float) in their way."
-            }, //Pass in movie as a props to Movie component
+            },
             {
                 title: 'Carol',
                 director: 'Todd Haynes',
@@ -35,6 +35,8 @@ export default class MovieList extends React.Component {
             <div>
                 {array}
             </div>
+
+
         );
     }
 }
