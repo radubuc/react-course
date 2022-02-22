@@ -10,9 +10,18 @@ export default class ReviewForm extends React.Component {
         return (
             <form className='container'>
                 <div className="form-group">
+                    <label htmlFor="exampleFormControlSelect1">Select the movie you'd like to review</label>
+                    <select className="form-control" id="exampleFormControlSelect1">
+                        <option>The SpongeBob SquarePants Movie</option>
+                        <option>Carol</option>
+                        <option>Rocketman</option>
+                    </select>
+                </div>
+                <div className="form-group">
                     <label htmlFor="exampleFormControlInput1">Username</label>
                     <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Ex: SpongeRobert22" />
                 </div>
+                
                 <div className="form-group">
                     <label htmlFor="exampleFormControlTextarea1">What did you think about the movie?</label>
                     <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write your review here"></textarea>

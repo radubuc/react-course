@@ -21,6 +21,7 @@ export default class Review extends React.Component {
         //How do I add reviews to a specific movie?
         let reviews = [
             {
+                movie: "The Spongebob Squarepants Movie",
                 content: "Alec Baldwin has no comment.",
                 username: 'ThinningNotBald63',
                 date: '2-20-2022'
