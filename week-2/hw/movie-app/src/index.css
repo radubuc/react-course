@@ -47,7 +47,11 @@ h3 {
 .btn-primary {
   background-color: #6f42c1;
   border: none;
-  
+}
+
+.btn-primary:hover {
+  background-color: rgb(111, 66, 193, 0.8);
+  border: black;
 }
 
 .card {
