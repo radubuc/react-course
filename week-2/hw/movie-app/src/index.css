@@ -11,3 +11,57 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#bg {
+  background-color: #f8f9fa;
+  /* color: #17a2b8; */
+}
+
+#nav {
+  background-color: rgb(111, 66, 193, 0.1);
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+h1 {
+  margin-top: 8px;
+  color: #6f42c1;
+  font-family: 'Abril Fatface', cursive;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  color: black;
+}
+
+h3 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #343a40;
+}
+
+
+.btn-primary {
+  background-color: #6f42c1;
+  border: none;
+  
+}
+
+.card {
+  background-color: rgb(23, 162, 184, 0.10);
+}
+
+.card:nth-child(2) {
+  background-color: rgb(52, 58, 64, 0.07);
+}
+
+footer {
+  color: #343a40;
+  margin-bottom: 33px;
+}
+
+
+

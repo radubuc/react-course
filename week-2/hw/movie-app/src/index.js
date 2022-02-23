@@ -10,7 +10,6 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <div>
     <MovieList />
-    <ReviewForm />
   </div>,
     
   document.getElementById('root')
