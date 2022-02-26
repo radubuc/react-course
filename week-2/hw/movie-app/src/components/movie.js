@@ -20,17 +20,21 @@ export default class Movie extends React.Component {
 
             // movies: props.movies
         }
+        this.postReview = this.postReview.bind(this)
     }
 
     postReview(evt) {
         console.log(evt.target.parentElement);
         //Find best path for grabbing review out of review text box and put into review list for movie
         // e.target.previousElementSibling.previousElementSibling.previousElementSibling.value 
+
+        let newReview = evt.target.firstChildElement.firstChildElement.value
         evt.preventDefault();
 
         this.setState(state => {
             if (state.title === evt.target.name) {
                 console.log(state.title)
+                return {reviews: state.reviews.push(newReview)}
             }
         })
 

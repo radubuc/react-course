@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import MovieList from './components/movie-list-container';
 
 function App() {
   return (
@@ -21,5 +22,13 @@ function App() {
     </div>
   );
 }
+
+// function App() {
+//   return (
+//     <div>
+//       <MovieList />
+//     </div>
+//   );
+// }
 
 export default App;
