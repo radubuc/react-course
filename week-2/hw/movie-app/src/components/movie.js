@@ -5,6 +5,7 @@
 //rating-gets passed in dynamically
 
 import React from 'react';
+// import Review from './review';
 import ReviewForm from './review-form';
 import ReviewList from './review-list-container';
 
@@ -27,8 +28,10 @@ export default class Movie extends React.Component {
         console.log(evt.target.parentElement);
         //Find best path for grabbing review out of review text box and put into review list for movie
         // e.target.previousElementSibling.previousElementSibling.previousElementSibling.value 
+        //or evt.target.firstChildElement.firstChildElement.value
 
-        let newReview = evt.target.firstChildElement.firstChildElement.value
+        let newReview = previousElementSibling.firstChildElement.value;
+        // let newReview = this.state.reviews
         evt.preventDefault();
 
         this.setState(state => {
