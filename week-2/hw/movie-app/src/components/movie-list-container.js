@@ -33,7 +33,7 @@ export default class MovieList extends React.Component {
             <Movie title={movie.title} director={movie.director} year={movie.year} synopsis={movie.synopsis} reviews={movie.reviews} key={index} />
         )  
 
-        console.log(movies);
+        // console.log(movies);
         return (
             <div>
                 {array}

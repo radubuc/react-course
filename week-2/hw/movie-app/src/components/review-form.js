@@ -13,14 +13,18 @@ export default class ReviewForm extends React.Component {
             username: props.username,
             content: props.content,
             rating: props.rating,
-            date: props.date,
+            // date: props.date,
             id: props.id
         }
         this.handleClick= this.handleClick.bind(this)
     }
 
     handleClick(e) {
-        this.props.onClick(e)
+        // this.props.onClick(e);
+        console.log('test inside handleclick');
+        console.log(e);
+
+        // names={props.name}, username={props.username}, content={props.content}, rating={props.rating},  id={props.id};
     }
 
     render() {
@@ -58,14 +62,21 @@ export default class ReviewForm extends React.Component {
                     <label className="form-check-label" htmlFor="inlineRadio3">⭐⭐⭐⭐⭐</label>
                 </div>
                 <br /><br />
-
-                <button className="btn btn-primary mb-2"  onClick={this.handleClick} name={this.state.name} username={this.state.username} content={this.state.content} rating={this.state.rating} date={this.state.date} id={this.state.id}>Submit review</button>
+                <button className="btn btn-primary mb-2" onClick={this.handleClick(this.content)} name={this.state.name} username={this.state.username} content={this.state.content} rating={this.state.rating} id={this.state.id}>Submit your review</button>
                 <br /><br />
             </form>
         );
     }
 }
+//Next step: Prove data from user's review is captured when submit is clicked. Then take action with data and make updates
 
+// <button className="btn btn-primary mb-2"  onClick={console.log('hi')} name={this.state.name} username={this.state.username} content={this.state.content} rating={this.state.rating}  id={this.state.id}>Submit review</button>
+
+
+
+
+
+// date={this.state.date}
 
 //Note: "for" is a reserved keyword in JS, so use 'htmlFor' on <label> tag instead
 
