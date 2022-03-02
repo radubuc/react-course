@@ -139,3 +139,11 @@ export default class Movie extends React.Component {
 
 
 
+//Resources:
+// https://stackoverflow.com/questions/1423777/how-can-i-check-whether-a-radio-button-is-selected-with-javascript
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Element
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/firstElementChild
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/nextElementSibling
