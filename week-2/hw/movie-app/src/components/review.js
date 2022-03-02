@@ -52,12 +52,9 @@ export default class Review extends React.Component {
 
         return (
             <div>
-                <ul>
-                    <li>
-                        Reviews
-                    </li>
-                    {reviewsArray}
-                </ul>
+                <p><b>Reviews</b></p>
+                
+                {reviewsArray}
             </div>
             
 
@@ -70,3 +67,12 @@ export default class Review extends React.Component {
         );
     }
 }
+
+
+/* <div>
+    <ul>
+        <p><b>Reviews</b></p>
+
+        {reviewsArray}
+    </ul>
+</div> */

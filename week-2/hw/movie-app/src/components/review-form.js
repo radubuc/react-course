@@ -46,23 +46,23 @@ export default class ReviewForm extends React.Component {
 
                 <p>How many stars would you give it?</p>
                 <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="OneStar" />
+                    <input className="form-check-input" type="radio" name="inlineRadioOptions" id="OneStar" value="⭐" />
                     <label className="form-check-label" htmlFor="inlineRadio1">⭐</label>&emsp;
                 </div>
                 <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="TwoStars" />
+                    <input className="form-check-input" type="radio" name="inlineRadioOptions" id="TwoStars" value="⭐⭐" />
                     <label className="form-check-label" htmlFor="inlineRadio2">⭐⭐</label>&emsp;
                 </div>
                 <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="ThreeStars"/>
+                    <input className="form-check-input" type="radio" name="inlineRadioOptions" id="ThreeStars" value="⭐⭐⭐"/>
                     <label className="form-check-label" htmlFor="inlineRadio3">⭐⭐⭐</label>&emsp;
                 </div>
                 <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="FourStars"/>
+                    <input className="form-check-input" type="radio" name="inlineRadioOptions" id="FourStars" value="⭐⭐⭐⭐"/>
                     <label className="form-check-label" htmlFor="inlineRadio3">⭐⭐⭐⭐</label>&emsp;
                 </div>
                 <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="FiveStars"/>
+                    <input className="form-check-input" type="radio" name="inlineRadioOptions" id="FiveStars" value="⭐⭐⭐⭐⭐"/>
                     <label className="form-check-label" htmlFor="inlineRadio3">⭐⭐⭐⭐⭐</label>
                 </div>
                 <br /><br />
