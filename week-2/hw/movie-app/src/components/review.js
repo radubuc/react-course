@@ -46,15 +46,21 @@ export default class Review extends React.Component {
         let reviewsArray;
         if (this.state.reviews) {
             reviewsArray = this.state.reviews.map((review, index) =>
-            <li key={index}>{review}</li>
+            <p className='review-p' key={index}>{review}</p>
             )
         }
+        // if (this.state.reviews) {
+        //     reviewsArray = this.state.reviews.map((review, index) =>
+        //     <li key={index}>{review}</li>
+        //     )
+        // }
 
         return (
             <div>
-                <p><b>Reviews</b></p>
+                <p className='text-center'><b>Reviews</b></p>
                 
                 {reviewsArray}
+                <hr />
             </div>
             
 
