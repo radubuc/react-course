@@ -20,7 +20,11 @@ export default class ReviewForm extends React.Component {
     }
 
     handleClick(e) {
-        // this.props.onClick(e);
+        console.log(e);
+
+        this.props.onClick(e);
+        e.preventDefault();
+
         console.log('test inside handleclick');
         console.log(e);
 
@@ -29,7 +33,7 @@ export default class ReviewForm extends React.Component {
 
     render() {
         return (
-            <form className='container'>
+            <form className='container' onSubmit={this.handleClick}>
                 <div className="form-group">
                     <label htmlFor="exampleFormControlInput1">Username</label>
                     <input type="text" className="form-control" id="Input1" placeholder="Ex: SpongeRobert22" />
@@ -62,7 +66,7 @@ export default class ReviewForm extends React.Component {
                     <label className="form-check-label" htmlFor="inlineRadio3">⭐⭐⭐⭐⭐</label>
                 </div>
                 <br /><br />
-                <button className="btn btn-primary mb-2" onClick={this.handleClick(this.content)} name={this.state.name} username={this.state.username} content={this.state.content} rating={this.state.rating} id={this.state.id}>Submit your review</button>
+                <button className="btn btn-primary mb-2" onClick={this.handleClick} name={this.state.name} username={this.state.username} content={this.state.content} rating={this.state.rating} id={this.state.id}>Submit your review</button>
                 <br /><br />
             </form>
         );

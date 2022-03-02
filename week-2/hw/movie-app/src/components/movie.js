@@ -26,15 +26,15 @@ export default class Movie extends React.Component {
 
     postReview(evt) {
         console.log(evt.target);
-        console.log(evt.target.parentElement);
+        console.log(evt.target.parentElement.firstElementChild.firstElementChild.nextElementSibling);
         
         //Find best path for grabbing review out of review text box and put into review list for movie
         // e.target.previousElementSibling.previousElementSibling.previousElementSibling.value 
         //or evt.target.firstChildElement.firstChildElement.value
 
-        let newReview = evt.target.firstChildElement.firstChildElement.value;
-        // let newReview = this.state.reviews
-        evt.preventDefault();
+        let newReview = evt.target.parentElement.firstElementChild.firstElementChild.nextElementSibling.value;
+        // // let newReview = this.state.reviews
+        // evt.preventDefault();
 
         this.setState(state => {
             if (state.title === evt.target.name) {
@@ -43,7 +43,6 @@ export default class Movie extends React.Component {
             }
         })
 
-        // return {reviews: state.reviews.push(newReview) }
 
         
     }
@@ -59,12 +58,12 @@ export default class Movie extends React.Component {
                 <hr />
                 <ReviewList reviews={this.state.reviews} />
                 <hr />
-                <ReviewForm />
+                <ReviewForm onClick={(evt) => this.postReview(evt)} name={this.state.title}/>
                 
             </div>
         );
     }
 }
 
-//onClick={(evt) => this.postReview(evt)} name={this.state.title}
+
 

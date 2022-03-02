@@ -49,6 +49,10 @@ h3 {
   border: none;
 }
 
+.btn-primary:active {
+  background-color: rgb(23, 162, 184);
+}
+
 .btn-primary:hover {
   background-color: rgb(111, 66, 193, 0.8);
   border: black;
