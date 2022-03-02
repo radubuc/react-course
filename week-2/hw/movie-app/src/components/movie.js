@@ -31,7 +31,7 @@ export default class Movie extends React.Component {
         console.log(evt.target.parentElement.firstElementChild.nextElementSibling); //Gives me form group for content
         console.log(evt.target.parentElement.firstElementChild.nextElementSibling.firstElementChild.nextElementSibling); //Gives me Write your review here text area!!!
         console.log(evt.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling); //Gives me How many stars would you give it?
-        console.log(evt.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild); //Gives me 1Star if I choose 1Star radio button
+        console.log(evt.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild); //Gives me 1Star if I choose 1Star radio button
         
         
 
@@ -39,7 +39,7 @@ export default class Movie extends React.Component {
 
         let username = evt.target.parentElement.firstElementChild.firstElementChild.nextElementSibling.value;
         let content = evt.target.parentElement.firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.value;
-        let rating = evt.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value;
+        let rating = evt.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.value;
         // // let newReview = this.state.reviews
         // evt.preventDefault();
 
