@@ -20,7 +20,7 @@ export default class ReviewForm extends React.Component {
     }
 
     handleClick(e) {
-        console.log(e);
+        console.log(this);
 
         this.props.onClick(e);
         e.preventDefault();

@@ -45,10 +45,9 @@ export default class Movie extends React.Component {
 
         let username = evt.target.parentElement.firstElementChild.firstElementChild.nextElementSibling.value;
         let content = evt.target.parentElement.firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.value;
-        let rating = evt.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.value;
-        // let rating;
-        // let rating = null;
-        // let rating = getRating(); //Do I have to pass in an argument?
+        // let rating = evt.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.value;
+        let rating = getRating(); //Do I have to pass in an argument?
+        console.log(rating);
 
         this.setState(state => {
             if (state.title === evt.target.name) {
@@ -58,38 +57,36 @@ export default class Movie extends React.Component {
         })
 
         //Pseudo code
-        // function getRating() { //Do I have to pass in a parameter?
-        //     if(document.getElementById('OneStar').checked) {
-        //         let rating = evt.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.value;
+        function getRating() { //Do I have to pass in a parameter?
+            let rating = null;
+            console.log(document.getElementById("OneStar"));
+            console.log(document.getElementById("TwoStars"));
+            console.log(document.getElementById("ThreeStars"));
+            console.log(document.getElementById("FourStars"));
+            console.log(document.getElementById("FiveStars"));
+
+            if(document.getElementById('OneStar').checked) {
+                rating = "⭐";
     
-        //         return rating;
     
-        //     } else if(document.getElementById('TwoStar').checked) {
-        //         let rating = evt.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.nextElementSibling.firstElementChild.value;
+            } else if(document.getElementById('TwoStars').checked) {
+                rating = "⭐⭐";
     
-        //         return rating;
     
-        //     } else if(document.getElementById('ThreeStar').checked) {
-        //         let rating = evt.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.value;
+            } else if(document.getElementById('ThreeStars').checked) {
+                rating = "⭐⭐⭐";
     
-        //         return rating;
     
-        //     } else if(document.getElementById('FourStar').checked) {
-        //         let rating = evt.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value;
+            } else if(document.getElementById('FourStars').checked) {
+                rating = "⭐⭐⭐⭐";
     
-        //         return rating;
     
-        //     } else if(document.getElementById('FiveStar').checked) {
-        //         let rating = evt.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value;
+            } else if(document.getElementById('FiveStars').checked) {
+                rating = "⭐⭐⭐⭐⭐";
     
-        //         return rating;
-    
-        //     } else {
-        //         let rating = null;
-    
-        //         return rating;
-        //     }
-        // }
+            }
+            return rating;
+        }
         
 
         // let newReview = this.state.reviews
