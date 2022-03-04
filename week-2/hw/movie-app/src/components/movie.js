@@ -1,11 +1,5 @@
-//title
-//director
-//year
-//synopsis
-//rating-gets passed in dynamically
-
 import React from 'react';
-// import Review from './review';
+import MovieList from './movie-list-container';
 import ReviewForm from './review-form';
 import ReviewList from './review-list-container';
 
@@ -18,8 +12,6 @@ export default class Movie extends React.Component {
             year: props.year,
             synopsis: props.synopsis,
             reviews: props.reviews
-
-            // movies: props.movies
         }
         this.postReview = this.postReview.bind(this)
     }
@@ -41,83 +33,53 @@ export default class Movie extends React.Component {
         // console.log(evt.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild); //Give me ⭐⭐⭐⭐ if I choose 4Star radio button
 
         // console.log(evt.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild); //Give me ⭐⭐⭐⭐⭐ if I choose 5Star radio button
-    
+
+        // let rating = evt.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.value;
 
         let username = evt.target.parentElement.firstElementChild.firstElementChild.nextElementSibling.value;
         let content = evt.target.parentElement.firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.value;
-        // let rating = evt.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.value;
-        let rating = getRating(); //Do I have to pass in an argument?
-        console.log(rating);
+        
+        let rating = getRating();
+        // console.log(rating);
 
         this.setState(state => {
-            if (state.title === evt.target.name) {
-                console.log(state.title)
+            if(state.title === evt.target.name) {
+                // console.log(state.title)
                 return {reviews: state.reviews.push(username, content, rating)}
             }
         })
 
-        //Pseudo code
-        function getRating() { //Do I have to pass in a parameter?
+        function getRating() {
             let rating = null;
-            console.log(document.getElementById("OneStar"));
-            console.log(document.getElementById("TwoStars"));
-            console.log(document.getElementById("ThreeStars"));
-            console.log(document.getElementById("FourStars"));
-            console.log(document.getElementById("FiveStars"));
+
+            // console.log(document.getElementById("OneStar"));
+            // console.log(document.getElementById("TwoStars"));
+            // console.log(document.getElementById("ThreeStars"));
+            // console.log(document.getElementById("FourStars"));
+            // console.log(document.getElementById("FiveStars"));
 
             if(document.getElementById('OneStar').checked) {
                 rating = "⭐";
     
-    
             } else if(document.getElementById('TwoStars').checked) {
                 rating = "⭐⭐";
-    
     
             } else if(document.getElementById('ThreeStars').checked) {
                 rating = "⭐⭐⭐";
     
-    
             } else if(document.getElementById('FourStars').checked) {
                 rating = "⭐⭐⭐⭐";
-    
     
             } else if(document.getElementById('FiveStars').checked) {
                 rating = "⭐⭐⭐⭐⭐";
     
             }
             return rating;
-        }
-        
-
-        // let newReview = this.state.reviews
-        // evt.preventDefault();
-
-        
+        }      
     }
 
-    //Unofficial class with Jeff 3/1/22 -- Spit out username!
-    // postReview(evt) {
-    //     console.log(evt.target);
-    //     console.log(evt.target.parentElement.firstElementChild.firstElementChild.nextElementSibling);
-        
-    //     //Find best path for grabbing review out of review text box and put into review list for movie
-    //     // e.target.previousElementSibling.previousElementSibling.previousElementSibling.value 
-    //     //or evt.target.firstChildElement.firstChildElement.value
-
-    //     let newReview = evt.target.parentElement.firstElementChild.firstElementChild.nextElementSibling.value;
-    //     // // let newReview = this.state.reviews
-    //     // evt.preventDefault();
-
-    //     this.setState(state => {
-    //         if (state.title === evt.target.name) {
-    //             console.log(state.title)
-    //             return {reviews: state.reviews.push(newReview)}
-    //         }
-    //     })
-    // }
-
     render() {
-        return ( //Need to call movie component with props
+        return (
             <div className="card my-4 container" style={{width: '70%'}}>
                 <div className="card-body">
                     <h2 className="card-title">{this.state.title}</h2>
@@ -128,7 +90,6 @@ export default class Movie extends React.Component {
                 <ReviewList reviews={this.state.reviews} />
                 <hr />
                 <ReviewForm onClick={(evt) => this.postReview(evt)} name={this.state.title}/>
-                
             </div>
         );
     }

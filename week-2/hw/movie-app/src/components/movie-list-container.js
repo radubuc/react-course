@@ -1,10 +1,9 @@
 import React from 'react';
 import Movie from './movie.js';
-import ReviewForm from './review-form.js';
 
 export default class MovieList extends React.Component {
     render() {
-        let movies = [ //Pass in movie as a props to Movie component
+        let movies = [
             {
                 title: 'The Spongebob Squarepants Movie',
                 director: 'Stephen Hillenburg',
@@ -38,8 +37,6 @@ export default class MovieList extends React.Component {
             <div>
                 {array}
             </div>
-
-
         );
     }
 }
