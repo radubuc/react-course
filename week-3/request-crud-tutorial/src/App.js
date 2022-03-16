@@ -3,8 +3,8 @@
 //Get all houses, iterate over them when they come back, create a house element for each, and then display. We will pass data through to each house
 
 import React from 'react';
-import { render } from 'react-dom';
 import './App.css';
+import House from './house';
 
 const HOUSES_ENDPOINT = 'https://ancient-taiga-31359.herokuapp.com/api/houses';
 
@@ -46,7 +46,7 @@ render() {
 	deleteRoom(e, house, room) { //e is default action that comes back when browser fires off event. Need to take in house and room to delete the right room
 		const index = house.rooms.indexOf(room); //Uniquely IDs each room to be deleted
 		house.rooms.splice(index, 1); //Removes 1 element from index position from the rooms array
-		updateHouse(house) //Will add method below later on (top down)
+		updateHouse(house) //Will add method later on line 82 (top down)
 			.then(() => {
 				this.setState(state => { //Take previous state...
 					for (let h of state.houses) { //Iterate thru each house...
@@ -80,7 +80,7 @@ render() {
 }
 
 function updateHouse(house) { //Take house to update, then make API call
-	return fetch(`${HOUSES-ENDPOINT}/${house._id}`, { //URL: /Houses endpoint in URL/house id
+	return fetch(`${HOUSES_ENDPOINT}/${house._id}`, { //URL: /Houses endpoint in URL/house id
 		method: 'PUT', //PUT method whether adding or deleting room
 		headers: {
 			'Content-Type': 'application/json'
