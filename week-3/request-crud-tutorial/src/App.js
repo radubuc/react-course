@@ -90,3 +90,7 @@ function updateHouse(house) { //Take house to update, then make API call
 } //Now go back to where updateHouse() is called on line 46
 
 
+
+//Tip: If app not functioning look at life cycle methods. Try doing a console.log() at an earlier method in the life cycle to see if that was working, and move through the methods
+
+
