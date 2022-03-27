@@ -9,20 +9,25 @@ class HousesApi { //Does NOT extend react!
             const data = await resp.json();
             return data;
         } catch(e) {
-            console.log("Oops, looks like fetchHouses had an oopsie.", e);
+            console.log("Whoops, looks like fetchHouses had an oopsie.", e);
         }
         
     }
 
     put = async (house) => { //UPDATE house
-        const resp = await fetch(`${HOUSES_ENDPOINT}/${house._id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(house)
-        });
-        return await resp.json(); //Could also assign to variable and return variable like in GET method above
-        //left off REFACTOR APP PART 1, 5:49
+        try {
+            const resp = await fetch(`${HOUSES_ENDPOINT}/${house._id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(house)
+            });
+            return await resp.json(); //Could also assign to variable and return variable like in GET method above
+        } catch(e) {
+            console.log("Whoops, looks like updating houses had an oopsie.", e);
+        }
     }
 }
+
+export const housesApi = new HousesApi(); //Have to create instance of class. We will be able to import and use this instance into other react components, as opposed to different methods each time.
