@@ -34,8 +34,6 @@ export class HouseList extends React.Component {
                 ))}
             </div>
         ) //Class for CSS added, but not going to style now. Go to App.css if I want to style. Remember {} inside JSX = JavaScript!
-        //Line 28: Map each house from our state's houses. With each instance of House (component not created yet), house name and ID (passed in as props) are being mapped. Then pass in updateHouse() method, so we can pass down from a child
+        //Lines 28-33: Map each house from our state's houses. With each instance of House (component not created yet), house name and ID (passed in as props) are being mapped. Then pass in updateHouse() method, so we can pass down from a child
     }
 }
-
-//Left off at Refactor App Part 1, 15:56
