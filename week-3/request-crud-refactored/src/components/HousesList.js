@@ -1,10 +1,10 @@
 import React from 'react';
-import { House } from './House'; //Will create House later
+import { House } from './House.js'; //Will create House later
 import { housesApi } from '../rest/HousesApi.js';
 
-export class HouseList extends React.Component {
+export class HousesList extends React.Component {
     state = { //State is now object and no longer in constructor
-        houses = [] //Empty array to start
+        houses: [] //Empty array to start
     };
 
     componentDidMount() { //Why componentDidMount?
@@ -37,3 +37,4 @@ export class HouseList extends React.Component {
         //Lines 28-33: Map each house from our state's houses. With each instance of House (component not created yet), house name and ID (passed in as props) are being mapped. Then pass in updateHouse() method, so we can pass down from a child
     }
 }
+

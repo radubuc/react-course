@@ -1,5 +1,5 @@
 import React from 'react';
-import {NewRoomForm} from './NewRoomForm'; //To be created later
+import {NewRoomForm} from './NewRoomForm.js'; //To be created later
 
 export const House = (props) => { //Functional component, that takes in props
     const {house, updateHouse} = props; //Deconstructing props to get our house (All the data that represents this house) and updateHouse method (so we can call method from this component)
@@ -26,7 +26,7 @@ export const House = (props) => { //Functional component, that takes in props
         <ul>
             {house.rooms.map((room, index) => ( //Map each room and index into this function
                 <li key={index}>
-                    <label>{`${room.name} Area: ${room.area}`}</label>
+                    <label>{`${room.name} Area: ${room.area}`}</label>&nbsp;
                     <button onClick={(e) => deleteRoom(room._id)}>Delete Room</button>
                 </li>
             ))}
