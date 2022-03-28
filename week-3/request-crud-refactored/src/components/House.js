@@ -35,8 +35,15 @@ export const House = (props) => { //Functional component, that takes in props
         //Line 30 creates a button with onClick that will delete room with id passed in. We already have access to house needed (we're already in house)
     );
 
-    //Pick up 24:56
-    return (
-        <div></div>
-    )
+    return ( //Returns entire an house with rooms
+        <div>
+            <h1>{house.name}</h1>
+            {
+                rooms({rooms, houseId: house._id, deleteRoom}) //This is JS to show rooms, passing props into rooms function. Even though funct on line 25, doesn't require arguments, we pass in props of all rooms, house ID, and deleteRoom method. Why no () after deleteRoom?
+            }
+            <NewRoomForm addNewRoom={addNewRoom} />
+        </div>
+    ); //NewRoomForm not created yet. addNewRoom method is passed in
 };
+
+//This is a functional component, so everything from line 4 down is a function! Which is why I can put a return() with no render(). Each section in this file could be a separate function, but it's better in here
