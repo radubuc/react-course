@@ -20,7 +20,7 @@ export const House = (props) => {
         <ul>
             {house.rooms.map((room, index) => ( //Map each room and index into this function
                 <li key={index}>
-                    <label>{`${room.name} Area: ${room.area}`}</label>&nbsp;
+                    <label>{`${room.name} Area: ${room.area}`}</label>&nbsp; &nbsp;
                     <button onClick={(e) => deleteRoom(room._id)}>Delete Room</button>
                 </li>
             ))}

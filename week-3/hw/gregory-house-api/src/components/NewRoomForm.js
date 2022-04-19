@@ -27,17 +27,18 @@ export const NewRoomForm = (props) => {
              <form onSubmit={onSubmit}>
                 <input
                     type='text'
-                    placeholder='name'
+                    placeholder='Name'
                     onChange={(e) => setName(e.target.value)} //When text in this input changes, call setName method and set name (from hook on line 4) to target value. 
                     value={name} // OnChange updates state value, then state value updates value in input field, so they stay tied together both ways
-                />&nbsp;
+                />&nbsp; &nbsp;
                 <input
                     type='text'
-                    placeholder='area'
+                    placeholder='Area'
                     onChange={handleAreaInput} //When text in this input changes, call handleAreaInput() method defined starting on line 8.
                     value={area} 
-                />&nbsp;
+                />&nbsp; &nbsp;
                 <button type='submit'>Add Room</button> 
+                <br /><br /><br />
             </form>
         </div>
     )
