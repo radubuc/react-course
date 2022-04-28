@@ -19,7 +19,7 @@ export class HousesList extends React.Component {
 
     updateHouse = async (updatedHouse) => { 
         await housesApi.put(updatedHouse); 
-        this.fetchHouses(); //Once response comes back, call fetchHouses() method, which will run and then set state = to all houses again with update included
+        this.fetchHouses(); //Once response comes back, call fetchHouses() method, which runs and sets state = to all houses again with update included
     };
 
     render() {

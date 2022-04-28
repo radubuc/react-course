@@ -19,10 +19,6 @@ h1 {
   background-color: rgba(255, 255, 255, 0.3);
   margin-bottom: 50px;
   max-width: 60%;
-
-  /* @media screen (max-width){
-    700px media query here
-  } */
 }
 
 ul {
@@ -30,18 +26,8 @@ ul {
 }
 
 li {
-  /* margin-top: 5px; */
   padding-top: 5px;
 }
-
-/* .footerWrapper {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-} */
 
 /* FOOTER STYLES BELOW */
 .container:not(div) {
@@ -58,10 +44,7 @@ a:hover {
   color: #5E87CB;
 }
 
-
-
-
-
+/* Default styles begin */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
