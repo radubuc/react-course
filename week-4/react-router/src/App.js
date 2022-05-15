@@ -44,13 +44,13 @@ export default function App() {
           </li>
         </ul>
         <Switch>
-          <Route path='/posts'>
+          <Route path="/posts">
             <Posts posts={posts} />
           </Route>
-          <Route path='friends'>
+          <Route path="/friends">
             <Friends names={["Chantel", "Ricky", "Sabeen"]} />
           </Route>
-          <Route path='/'>
+          <Route path="/">
             <Home />
           </Route>
         </Switch>
