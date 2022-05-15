@@ -1,0 +1,13 @@
+Week 4
+React Router Video Notes
+
+SPA: Single Page Application- One page that can render different views based on navigation from buttons, links, URLs, and any other control. Changes view of a single page to make it appear like a traditional website with multiple pages.
+
+React Router is a tool to make SPAs
+
+Tip from Moodle:
+Note: React and react-router-dom have updated their structure. 
+
+When you install react-router-dom, use the following npm install react-router-dom@5.3.0 in order to follow along with the videos.
+
+If you have issues with the switch statement not working, you will need to use React 17.  npm install --save react@17.0.0
