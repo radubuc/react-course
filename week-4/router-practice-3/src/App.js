@@ -1,4 +1,15 @@
+//REACT ROUTER AND REACT BOOTSTRAP VIDEO NOTES
 import React from 'react';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { Button, ButtonGroup, Alert, Card, Container } from 'react-bootstrap';
+// Best to import bootstrap components separately to reduce code served to client (see below), but that's not compatible with my version of React Bootstrap for some reason
+// import { Button } from 'react-bootstrap/Button';
+// import { ButtonGroup } from 'react-bootstrap/ButtonGroup';
+// import { Alert } from 'react-bootstrap/Alert';
+// import { Card } from 'react-bootstrap/Card';
+// import { Container } from 'react-bootstrap/Container';
+
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -30,19 +41,20 @@ export default function App() {
   ];
 
   return(
-    <Router>
-        <div>
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/friends">Friends</Link>
-                </li>
-                <li>
-                    <Link to="/posts">Posts</Link>
-                </li>
-            </ul>
+    <Container>
+      <Router>
+          <div>
+            <ButtonGroup>
+              <Button variant="outline-secondary"> 
+                <Link to="/">Home</Link>
+              </Button>
+              <Button variant="outline-secondary">
+                <Link to="/friends">Friends</Link>
+              </Button>
+              <Button variant="outline-secondary">
+                <Link to="/posts">Posts</Link>
+              </Button>
+            </ButtonGroup>
             <Switch>
                 <Route path="/posts">
                     <Posts posts={posts} />
@@ -54,8 +66,9 @@ export default function App() {
                   <Home />
                 </Route>
             </Switch>
-        </div>
-    </Router>        
+          </div>
+      </Router>
+    </Container>
   );  
 }
 
@@ -87,17 +100,17 @@ function Posts({posts}) {
   return (
     <div>
       <h2>Posts</h2>
-      <ul>
+      
         {posts.map((post, index) => {
           return (
-            <li key={index}>
+            <Alert key={index} variant='primary'>
               <Link to={`${match.url}/${post.id}`}>
                 {post.title}
               </Link>
-            </li>
+            </Alert>
           );
         })}
-      </ul>
+      
       <Switch>
         <Route
           path={`${match.path}/:postId`}
@@ -119,11 +132,14 @@ function Posts({posts}) {
 //POST COMPONENT
 function Post(props) {
   const {data} = props;
-  return (
-    <div>
-      <h3>{data.title}</h3>
-      <h4>{data.date}</h4>
-      <p>{data.content}</p>
-    </div>
-  )
+  // If data is undefined, then return h1 with 404 error, otherwise return the card and data
+  return data == undefined ? <h1>404 Post Not Found</h1> : (
+    <Card>
+      <Card.Header>{data.title}</Card.Header>
+      <Card.Body>
+        <Card.Subtitle>{data.date}</Card.Subtitle>
+        <Card.Text>{data.content}</Card.Text>
+      </Card.Body>
+    </Card>
+  );
 }
