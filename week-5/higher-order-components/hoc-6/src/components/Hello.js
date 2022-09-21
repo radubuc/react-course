@@ -9,5 +9,5 @@ const Hello = () => {
     )
 }
 
-export default withRedBorder(Hello); //Sends Hello component into HOC
+export default withRedBorder(Hello); //Sends Helloimage.png component into HOC
 //More common to import HOC inside the component, not the app.js
