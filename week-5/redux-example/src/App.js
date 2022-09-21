@@ -1,4 +1,4 @@
-//REDUX 3 VIDEO NOTES
+//REDUX 3 & 4 VIDEO NOTES
 
 import React from "react";
 import { createStore } from "redux"; //Originally legacy_ was not included. I added this for troubleshooting
