@@ -1,0 +1,1 @@
+Note: For video "Deploy React AWS," I'm using the redux-example-refactored project in week-5 folder.
