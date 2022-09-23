@@ -1,1 +1,5 @@
-Note: For video "Deploy React AWS," I'm using the redux-example-refactored project in week-5 folder.
+Note: For video "Deploy React AWS," I'm using the redux-example-refactored code in week-5 folder, but cloning it into a new repo called react-aws in the week-6-final folder.
+
+Final path: /fesd-bootcamp/react-course/week-6-final/react-aws
+
+NOTE: DO NOT PUT ANYTHING NOT GOING TO PROD IN react-aws FOLDER!
