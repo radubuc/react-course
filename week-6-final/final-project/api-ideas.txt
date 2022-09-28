@@ -1,0 +1,14 @@
+Drug Interaction API
+https://lhncbc.nlm.nih.gov/RxNav/APIs/InteractionAPIs.html
+
+Health.gov MyHealthfinder API
+https://health.gov/our-work/national-health-initiatives/health-literacy/consumer-health-content/free-web-content/apis-developers
+
+LinkedIn - This would be good for Sales LP at work next year
+https://developer.linkedin.com/ 
+
+APIMmeme Generator
+http://apimeme.com/
+
+Spotify
+https://developer.spotify.com/documentation/web-api/ 
