@@ -1,0 +1,64 @@
+/*
+Blue: #030754
+Red:  #9e0b0f
+*/
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-size: 2rem; */
+    background-color:rgb(230, 230, 230);
+}
+
+
+header {
+    background-color: #030754;
+    padding: 10px 0px;
+    margin-top: 12px;
+}
+
+nav, footer {
+    background-color: #9e0b0f;
+
+}
+
+.utility-nav {
+    /* color: rgb(255, 255, 255); */
+    font-size: 1.125rem;
+    padding: 10px 15px;
+    
+}
+
+a.utility-nav:link {
+    color:rgb(255, 255, 255);
+}
+
+a.utility-nav:hover {
+    background-color: rgb(255, 255, 255);
+    color: #9e0b0f;
+}
+
+a.utility-nav:active {
+    color: #030754;
+}
+
+a.utility-nav:visited {
+    color: black;
+    ;
+}
+
+footer {
+    color: white;
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* Note: Use bootstrap classes to apply flex attributes, instead of using my external css. See https://getbootstrap.com/docs/4.4/utilities/flex/ */
+
+/* headers */
+/* font-family: Georgia, 'Times New Roman', Times, serif; OR CAMBRIA*/
+
+/* I should probably install SASS, huh? */

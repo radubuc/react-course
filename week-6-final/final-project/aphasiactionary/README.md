@@ -1,3 +1,7 @@
+# Aphasiactionary
+
+Aphasiactionary is a build your own dictionary app for caretakers of people with aphasia. Aphasia.org defines the disorder as "An impairment of language, affecting the production or comprehension of speech and the ability to read or write." Family and medical professionals can document what is said and what may be meant by the patient's words. Note: The Aphasiactionary is in the prototype stage and entries are not saved.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
