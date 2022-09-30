@@ -1,14 +1,17 @@
 import React from "react";
+
+import CreateEntryBtn from "./CreateEntryBtn";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button"
+import Container from "react-bootstrap/Container";
 import { Row, Col } from "react-bootstrap";
+
 import '../styles.css';
 
 
 const CreateEntryForm = () => {
     return (
         <div className="wrapper">
-            <div className="container">
+            <Container>
                 <Form>
                     <Row>
                         <Col>
@@ -22,20 +25,19 @@ const CreateEntryForm = () => {
                     </Row>
                     <Row>
                         <Col>
-                            <Button as="input" type="submit" value="Create Entry" className="custom-btn" />
+                            <CreateEntryBtn />
                         </Col>
 
                     </Row>
 
                 </Form>
-            </div>
+            </Container>
         </div>
-
-
-
     );
 }
 
 export default CreateEntryForm;
 
 //Is this an HOC? Do I need 1, 2, or 3 button components? I need Login, Sign Up and Create Entry buttons
+
+//<Button as="input" type="submit" value="Create Entry" className="custom-btn" />

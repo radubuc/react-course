@@ -26,46 +26,69 @@ header {
     padding: 10px 0px;
     margin-top: 12px;
 }
+
+header > div > .logo {
+    margin-left:24px;
+}
 /* HEADER STYLES END */
 
-/* NAV STYLES START */
+/* NAV & BUTTON STYLES START */
 nav {
     background-color: #9e0b0f;
     margin-bottom: 24px;
+}
+.btn-primary {
+    background-color: rgb(255, 255, 255, 0) !important;
+    border-color: rgb(255, 255, 255, 0) !important;
 }
 
 .utility-nav {
     /* color: rgb(255, 255, 255); */
     font-size: 1.125rem;
-    padding: 10px 15px;
+    /* padding: 10px 15px; */
 }
 
-a.utility-nav:link {
-    color:rgb(255, 255, 255);
+.utility-nav > :link {
+    color:rgb(255, 255, 255) !important;
 }
 
-a.utility-nav:hover {
-    background-color: rgb(255, 255, 255);
-    color: #9e0b0f;
+.utility-nav > :hover {
+    background-color: rgb(255, 255, 255) !important;
+    color: #9e0b0f !important;
+
+    /* --bs-btn-bg: #9e0b0f !important; */
 }
 
-a.utility-nav:active {
-    color: #030754;
+.utility-nav > :active {
+    color: #030754 !important;
 }
 
-a.utility-nav:visited {
-    color: black;
+.utility-nav > a:visited {
+    color: black !important;
     ;
 }
-/* NAV STYLES END */
 
-/* BUTTON STYLES START */
+.link {
+    padding: 9px;
+}
+
 .custom-btn {
     background-color: #030754 !important;
     border-color: #030754 !important;
 }
-/* Add same link, hover, active, and visited styles for custom-btn class */
-/* BUTTON STYLES END */
+
+.custom-btn:hover {
+    background-color: white !important;
+    color: #030754 !important;
+}
+
+.custom-btn:active {
+    color: #9e0b0f !important;
+}
+
+
+/* Add same link, hover, active, and visited styles for custom-btn class. Also right align btn with bootstrap */
+/* NAV & BUTTON STYLES END */
 
 /* FOOTER STYLES START */
 footer {

@@ -1,0 +1,17 @@
+CreateEntryBtn
+
+constructor(props) {
+        super(props);
+        this.state = {
+            userEntry: '',
+        }
+
+        this.createEntry = this.createEntry.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    createEntry(event) {
+        event.preventDefault();
+        this.props.onFormSubmit(this.state);
+        
+    }
