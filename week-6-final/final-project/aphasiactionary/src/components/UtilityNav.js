@@ -43,7 +43,8 @@ const UtilityNav = () => {
         </Router>
         //Should I call CreateEntryForm component in Switch above?
         //IDK what to do with entries in Switch. I am likening them to Posts in router-practice-3. I moved my entries object from App.js to Entries component, so I imported ViewAllEntries and used it to access to entries object. IDK if it works yet
-        //Can I set / (root) equal to /create-entry to make it the default view?
+
+        //Can I set / (root) equal to /create-entry to make it the default view? Looks like yes, as long as it is last in the list!
     )
 };
 

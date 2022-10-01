@@ -16,13 +16,27 @@ import {
 } from 'react-router-dom';
 
 function App() {
-  // const entries = [
-  //   {
-  //     id: 1,
-  //     key: "test word",
-  //     value: "test definition"
-  //   },
-  // ]
+  var entries = [
+    {
+      key1: value1,
+      key2: value2,
+    }
+  ];
+
+  <p id="demo"></p>
+
+  entries.new_value2 = "new_value";
+  entries["another_new_geeks"] = "another_value";
+
+  var to_show = "var dict = { <br />";
+
+  for (var key in entries) {
+    to_show += `"${key}" : ${entries[key]} ${<br />}`;
+  }
+
+  to_show += " }; <br />";
+
+  document.getElementById("demo").innerHTML = to_show;
 
   return (
     <Container fluid>
@@ -45,16 +59,21 @@ function App() {
 
 export default App;
 
-//CreateEntryForm will be the default view
-
 //Set up array as props, pass props into Entries component when finished setting up props
+
+//I am modifying my origin JS entries object format to use key value pairs. I am loosely following this G4G tutorial: https://www.geeksforgeeks.org/how-to-create-dictionary-and-add-key-value-pairs-dynamically/
+//Don't I need an id though to update and delete?
+
+//Going to need a loop to iterate thru all entries
+
+//See to do list example Kristina sent: https://github.com/KristinaMacias/bootstrap-carousel
 
 // Components 
 // 1. CreateEntryBtn
 // 2. CreateEntryForm (Create)
 // 3. DeleteEntry (Delete)
 // 4. EditEntry (Update)
-// 5. Entries (Read)
+// 5. ViewAllEntries (Read)
 // 6. Entry? Maybe not needed anymore
 // 7. Footer
 // 8. HeaderNav
