@@ -20,6 +20,12 @@ function ViewAllEntries() {
                             <th>Delete word</th>
                         </tr>
                     </thead>
+                    <tr>
+                        <td>entries={entries}</td>
+                        <td>setEntries={setEntries}</td>
+                        <td>isEditing={isEditing}</td>
+                        <td>setIsEditing={setIsEditing}</td>
+                    </tr>
                 </Table>
             </Container>
         </div>
@@ -27,6 +33,12 @@ function ViewAllEntries() {
 }
 
 export default ViewAllEntries;
+
+//From App.js for reference
+// const [inputText, setInputText] = useState("");
+// const [entries, setEntries] = useState("");
+// const [currentEntry, setCurrentEntry] = useState({}); //Do I need something for current Entry? Maybe for editing the word
+// const [isEditing, setIsEditing] = useState(false);
 
 //3 views required. Create Entry is 1, View All Entries is 2, either Edit or Delete will need to change the view to fulfill project requirements
 

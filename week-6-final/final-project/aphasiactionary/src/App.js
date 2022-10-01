@@ -7,53 +7,32 @@ import Footer from './components/Footer';
 import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch
-} from 'react-router-dom';
-
 function App() {
-  var entries = [
-    {
-      key1: value1,
-      key2: value2,
-    }
-  ];
 
-  <p id="demo"></p>
+  //Using state and hooks to add word to dictionary
+  const [inputText, setInputText] = useState("");
+  const [entries, setEntries] = useState("");
+  const [currentEntry, setCurrentEntry] = useState({}); //Do I need something for current Entry? Maybe for editing the word
+  const [isEditing, setIsEditing] = useState(false);
 
-  entries.new_value2 = "new_value";
-  entries["another_new_geeks"] = "another_value";
-
-  var to_show = "var dict = { <br />";
-
-  for (var key in entries) {
-    to_show += `"${key}" : ${entries[key]} ${<br />}`;
-  }
-
-  to_show += " }; <br />";
-
-  document.getElementById("demo").innerHTML = to_show;
+  // var entries = [
+  //   {
+  //     id: "1",
+  //     word: "test",
+  //     definition: "test definition"
+  //   }
+  // ];
 
   return (
     <Container fluid>
-      <Router>
         <div>
           <HeaderNav />
           <UtilityNav />
 
-
           <Footer />
         </div>
 
-      </Router>
     </Container>
-
-
-
   );
 }
 
