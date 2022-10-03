@@ -57,7 +57,8 @@ export default App;
 // 7. Footer
 // 8. HeaderNav
 // 9. UtilityNav
-// 10. Router
+// 10. RestApi
+// 11. Router, Switch, Route and Link
 
 //Note: Login and Sign up buttons are present in nav, but they are not hooked up yet, so they don't count towards the 10 component requirement
 

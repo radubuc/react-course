@@ -78,3 +78,6 @@ class AphasiactionaryAPI {
 
 //A new instance must be created and can then import that to other components
 export const aphasiactionaryAPI = new AphasiactionaryAPI();
+
+//My Notes:
+//All API calls are built here. Reference POST request in CreateEntryForm and GET, UPDATE and DELETE requests in ViewAllEntries
