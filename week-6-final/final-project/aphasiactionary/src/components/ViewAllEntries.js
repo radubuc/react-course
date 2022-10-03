@@ -20,12 +20,12 @@ function ViewAllEntries() {
                             <th>Delete word</th>
                         </tr>
                     </thead>
-                    <tr>
+                    {/* <tr>
                         <td>entries={entries}</td>
                         <td>setEntries={setEntries}</td>
                         <td>isEditing={isEditing}</td>
                         <td>setIsEditing={setIsEditing}</td>
-                    </tr>
+                    </tr> */}
                 </Table>
             </Container>
         </div>

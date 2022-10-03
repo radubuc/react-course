@@ -10,6 +10,11 @@ import '../styles.css';
 
 
 const CreateEntryForm = () => {
+    // const inputTextHandler = (e) => {
+    //     setInputText(e.target.value);
+    // }
+    //{ inputText, setInputText, entries, setEntries }
+
     return (
         <div className="wrapper">
             <Container>
@@ -17,13 +22,17 @@ const CreateEntryForm = () => {
                     <Row>
                         <Col>
                             <h2>What they say</h2>
-                            <Form.Control type="text" placeholder="Word or phrase">inputText={App.inputText}</Form.Control>
-                        </Col>
-                        <Col>
-                            <h2>What they may mean</h2>
-                            <Form.Control as="textarea" placeholder="Word, phrase or example">entries={App.entries}</Form.Control>
+                            <Form.Control type="text" placeholder="Word or phrase"></Form.Control>
                         </Col>
                     </Row>
+                    {/* inputText={App.inputText} */}
+                    <Row>
+                        <Col>
+                            <h2>What they may mean</h2>
+                            <Form.Control as="textarea" placeholder="Word, phrase or example"></Form.Control>
+                        </Col>
+                    </Row>
+                    {/* entries={App.entries} */}
                     <Row>
                         <Col>
                             <CreateEntryBtn />
@@ -38,6 +47,9 @@ const CreateEntryForm = () => {
 }
 
 export default CreateEntryForm;
+
+//Make POST request in CreateEntryForm. Make GET request in ViewAllEntries
+
 
 //Should I pass in currentEntry or entries on line 24?
 
