@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, createContext } from 'react';
 
 import HeaderNav from './components/HeaderNav';
 import UtilityNav from './components/UtilityNav';
@@ -7,13 +7,25 @@ import Footer from './components/Footer';
 import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+//Following Dictionary w/ React tutorial: https://www.youtube.com/watch?v=BfnbPwqHhfY up to 17:25
+//Create Context - IDK what this means exactly
+export const InputContext = createContext();
 
-  //Using state and hooks to add word to dictionary
+function App() {
+  //Using state and hooks to input user's text to dictionary
   const [inputText, setInputText] = useState("");
-  const [entries, setEntries] = useState("");
-  const [currentEntry, setCurrentEntry] = useState({}); //Do I need something for current Entry? Maybe for editing the word
-  const [isEditing, setIsEditing] = useState(false);
+  // console.log(inputValue); //Checks if user's input is logged to console
+
+  const value = {
+    inputText, setInputText
+  }
+
+
+
+  // const [entries, setEntries] = useState("");
+  // const [currentEntry, setCurrentEntry] = useState({}); //Do I need something for current Entry? Maybe for editing the word
+  // const [entry, setEntry] = useState({}); //I think entry/setEntry will be used for creating a new entry and currentEntry/setCurrentEntry will be for updating an entry
+  // const [isEditing, setIsEditing] = useState(false);
 
   // var entries = [
   //   {
@@ -24,7 +36,8 @@ function App() {
   // ];
 
   return (
-    <Container fluid>
+    <InputContext.Provider value={value}>
+      <Container fluid>
         <div>
           <HeaderNav />
           <UtilityNav />
@@ -32,8 +45,11 @@ function App() {
           <Footer />
         </div>
 
-    </Container>
+      </Container>
+    </InputContext.Provider>
+
   );
+  //<InputContext value={value}> allows the text the user enters in the What They Say and What They May Mean to be used elsewhere
 }
 
 export default App;
@@ -53,7 +69,7 @@ export default App;
 // 3. DeleteEntry (Delete)
 // 4. EditEntry (Update)
 // 5. ViewAllEntries (Read)
-// 6. Entry? Maybe not needed anymore
+// 6. Entry?
 // 7. Footer
 // 8. HeaderNav
 // 9. UtilityNav

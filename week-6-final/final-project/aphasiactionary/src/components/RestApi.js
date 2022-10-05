@@ -5,6 +5,7 @@ const DICTIONARY_ENDPOINT =
 
 class AphasiactionaryAPI {
   //GET - View all entries request
+  //should I set my functions equal to a const?
   get = async () => {
     try {
       const resp = await fetch(DICTIONARY_ENDPOINT);

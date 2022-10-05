@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { InputContext } from "../App";
+
+import { aphasiactionaryAPI } from "./RestApi";
 
 import Table from "react-bootstrap/Table";
 import Container from 'react-bootstrap/Container';
@@ -7,6 +10,14 @@ import '../styles.css';
 
 //Since the entries will change, I don't think I should use a const. I think I should make it a function to grab all the entries? function name() {} or arrow function?
 function ViewAllEntries() {
+    //In Dictionary API example, his ResultList does the work on my ViewAllEntries
+    const { inputText, setInputText } = useContext(InputContext);
+    const [response, setResponse] = useState(null); //Null or empty string?
+    const [error, setError] = useState("");
+
+    useEffect(() => {
+// https://www.youtube.com/watch?v=BfnbPwqHhfY 24:01
+    }, [])
 
     return (
         <div className="wrapper">
