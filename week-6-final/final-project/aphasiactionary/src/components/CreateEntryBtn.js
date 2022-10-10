@@ -17,8 +17,8 @@ const CreateEntryBtn = () => {
     // } 
 
     return (
-        <Button as="input" type="submit" value="Create Entry" className="custom-btn" />
-
+        <Button type="submit" value="Create Entry" className="custom-btn" />
+        // as="input"
     );
 
 }

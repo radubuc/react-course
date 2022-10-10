@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { InputContext } from "../App";
 
 import { aphasiactionaryAPI } from "./RestApi";
+// import { wordKey, wordValue } from "./CreateEntryForm";
 
 import Table from "react-bootstrap/Table";
 import Container from 'react-bootstrap/Container';
@@ -15,9 +16,14 @@ function ViewAllEntries() {
     const [response, setResponse] = useState(null); //Null or empty string?
     const [error, setError] = useState("");
 
+    const [wordKey, setWordKey] = useState("");
+    const [wordValue, setWordValue] = useState("");
+
     useEffect(() => {
 // https://www.youtube.com/watch?v=BfnbPwqHhfY 24:01
     }, [])
+
+    //NEED TO ROUTE THRU ENTRY COMPONENT FIRST BEFORE GETTING TO VIEWALLENTRIES COMPONENT??? Makes sense
 
     return (
         <div className="wrapper">
@@ -31,17 +37,19 @@ function ViewAllEntries() {
                             <th>Delete word</th>
                         </tr>
                     </thead>
-                    {/* <tr>
-                        <td>entries={entries}</td>
-                        <td>setEntries={setEntries}</td>
-                        <td>isEditing={isEditing}</td>
-                        <td>setIsEditing={setIsEditing}</td>
-                    </tr> */}
-                </Table>
+                    <tr>
+                        <td>{wordKey}</td> 
+                        <td>{wordValue}</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                </Table> 
             </Container>
-        </div>
+        </div> //See House.js in HouseAPI example for JSX formatting and logic
     );
-}
+} //INSIDE OR OUTSIDE <td>s?
+//isEditing={isEditing}
+//setIsEditing={setIsEditing}
 
 export default ViewAllEntries;
 

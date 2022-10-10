@@ -1,4 +1,5 @@
-import React, { useState, createContext } from 'react';
+import React, { useEffect, useState, createContext } from 'react';
+import { aphasiactionaryAPI } from './components/RestApi';
 
 import HeaderNav from './components/HeaderNav';
 import UtilityNav from './components/UtilityNav';
@@ -12,6 +13,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export const InputContext = createContext();
 
 function App() {
+  //INPUT TEXT
   //Using state and hooks to input user's text to dictionary
   const [inputText, setInputText] = useState("");
   // console.log(inputValue); //Checks if user's input is logged to console
@@ -20,9 +22,23 @@ function App() {
     inputText, setInputText
   }
 
+  //GET ENTRIES
+  const [entries, setEntries] = useState([]); //entries is an array of objects, setEntries is a function to update state
+  const [newEntry, setNewEntry] = useState({ wordKey: "", wordValue: ""}); //newEntry is an object, setNewEntry is a function to update state - WHAT ABOUT ID?
+
+  const getAllEntries = async () => { //async function to get entries from api
+    const entriesFromServer = await aphasiactionaryAPI.get(); //get comments from api and store in variable
+    console.log(entriesFromServer);
+    setEntries(entriesFromServer); //update comments state with comments from api - setEntries(entriesFromServer)
+  };
+
+  useEffect(() => {
+    getAllEntries(); //Call function to get entries from API
+  }, []) //Empty array passed in as 2nd arg to prevent infinite loop
+  
 
 
-  // const [entries, setEntries] = useState("");
+
   // const [currentEntry, setCurrentEntry] = useState({}); //Do I need something for current Entry? Maybe for editing the word
   // const [entry, setEntry] = useState({}); //I think entry/setEntry will be used for creating a new entry and currentEntry/setCurrentEntry will be for updating an entry
   // const [isEditing, setIsEditing] = useState(false);
