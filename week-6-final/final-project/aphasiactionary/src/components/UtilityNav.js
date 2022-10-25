@@ -15,7 +15,8 @@ import '../styles.css';
 
 
 //Should I use class component or functional component? Depends on if I need to access state I think
-const UtilityNav = () => {
+const UtilityNav = ({entries, setEntries}) => {
+    // console.log("Props:", props);
     return (
         <Router>
             <div>
@@ -33,7 +34,7 @@ const UtilityNav = () => {
                         <CreateEntryForm />
                     </Route>
                     <Route path="/view-all-entries">
-                        <ViewAllEntries entries={ViewAllEntries.entries} />
+                        <ViewAllEntries entries={entries} setEntries={setEntries}/>
                     </Route>
                     <Route path="/">
                         <CreateEntryForm />

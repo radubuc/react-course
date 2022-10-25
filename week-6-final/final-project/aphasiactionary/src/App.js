@@ -56,7 +56,7 @@ function App() {
       <Container fluid>
         <div>
           <HeaderNav />
-          <UtilityNav />
+          <UtilityNav entries={entries}/>
 
           <Footer />
         </div>

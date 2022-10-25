@@ -11,11 +11,10 @@ import Container from "react-bootstrap/Container";
 import { Row, Col } from "react-bootstrap";
 
 import '../styles.css';
-import { propTypes } from 'react-bootstrap/esm/Image.js';
 
 //In Dictionary API example, his header does the work on my CreateEntryForm
 
-const CreateEntryForm = () => {
+const CreateEntryForm = (props) => {
     // const [value, setValue] = useState("");
     const [wordKey, setWordKey] = useState("");
     const [wordValue, setWordValue] = useState("");
